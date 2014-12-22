@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="true"
+
+
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="5" android:drawable="@drawable/btn_on_001" />
+    <item android:duration="5" android:drawable="@drawable/btn_on_002" />
+    <item android:duration="5" android:drawable="@drawable/btn_on_003" />
+    <item android:duration="5" android:drawable="@drawable/btn_on_004" />
+    <item android:duration="5" android:drawable="@drawable/btn_on_005" />
+    <item android:duration="5" android:drawable="@drawable/btn_on_006" />
+    <item android:duration="5" android:drawable="@drawable/btn_on_007" />
+    <item android:duration="5" android:drawable="@drawable/btn_on_008" />
+    <item android:duration="5" android:drawable="@drawable/btn_on_009" />
+    <item android:duration="5" android:drawable="@drawable/btn_on_010" />
+    <item android:duration="5" android:drawable="@drawable/btn_on_011" />
+    <item android:duration="5" android:drawable="@drawable/btn_on_012" />
+    <item android:duration="5" android:drawable="@drawable/btn_on_013" />
+    <item android:duration="5" android:drawable="@drawable/btn_on_014" />
+	
+
+	
+</animation-list>

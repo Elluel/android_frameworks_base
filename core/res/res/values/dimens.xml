@@ -146,13 +146,13 @@
     <dimen name="leanback_alert_dialog_horizontal_margin">54dip</dimen>
 
     <!-- Default height of an action bar. -->
-    <dimen name="action_bar_default_height">48dip</dimen>
+    <dimen name="action_bar_default_height">56.0dp</dimen>
     <!-- Vertical padding around action bar icons. -->
-    <dimen name="action_bar_icon_vertical_padding">8dip</dimen>
+    <dimen name="action_bar_icon_vertical_padding">28.0dp</dimen>
     <!-- Text size for action bar titles -->
-    <dimen name="action_bar_title_text_size">18dp</dimen>
+    <dimen name="action_bar_title_text_size">20.0dp</dimen>
     <!-- Text size for action bar subtitles -->
-    <dimen name="action_bar_subtitle_text_size">14dp</dimen>
+    <dimen name="action_bar_subtitle_text_size">16.0dip</dimen>
     <!-- Top margin for action bar subtitles -->
     <dimen name="action_bar_subtitle_top_margin">-3dp</dimen>
     <!-- Bottom margin for action bar subtitles -->
@@ -207,7 +207,7 @@
     <dimen name="action_button_min_width">56dip</dimen>
 
     <!-- Maximum height for a stacked tab bar as part of an action bar -->
-    <dimen name="action_bar_stacked_max_height">48dp</dimen>
+    <dimen name="action_bar_stacked_max_height">56.0dp</dimen>
 
     <!-- Maximum width for a stacked action bar tab. This prevents
          action bar tabs from becoming too wide on a wide screen when only
