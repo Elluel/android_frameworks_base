@@ -2073,6 +2073,12 @@ public final class Settings {
          */
         public static final String HEADS_UP_SNOOZE_TIME = "heads_up_snooze_time";
 
+       /**
+         * Timeout for ambient display notification
+         * @hide
+         */
+        public static final String DOZE_TIMEOUT = "doze_timeout";
+
         /**
          * Defines the global heads up notification decay
          *
