@@ -851,32 +851,28 @@ public abstract class BaseStatusBar extends SystemUI implements
                 appSettingsButton.setVisibility(View.GONE);
             }
 
-            if (isThisASystemPackage(pkg, pmUser)) {
-                headsUpButton.setVisibility(View.GONE);
-            } else {
-                boolean isHeadsUpEnabled = mNoMan.getHeadsUpNotificationsEnabledForPackage(
-                        pkg, appUidF) != Notification.HEADS_UP_NEVER;
-                headsUpButton.setAlpha(isHeadsUpEnabled ? 1f : 0.5f);
-                setHeadsUpButtonContentDescription((View) headsUpButton, isHeadsUpEnabled);
-                headsUpButton.setVisibility(View.VISIBLE);
-                headsUpButton.setOnClickListener(new View.OnClickListener() {
-                    public void onClick(View v) {
-                        int headsUp =
-                                mNoMan.getHeadsUpNotificationsEnabledForPackage(pkg, appUidF);
+            boolean isHeadsUpEnabled = mNoMan.getHeadsUpNotificationsEnabledForPackage(
+                    pkg, appUidF) != Notification.HEADS_UP_NEVER;
+            headsUpButton.setAlpha(isHeadsUpEnabled ? 1f : 0.5f);
+            setHeadsUpButtonContentDescription((View) headsUpButton, isHeadsUpEnabled);
+            headsUpButton.setVisibility(View.VISIBLE);
+            headsUpButton.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    int headsUp =
+                            mNoMan.getHeadsUpNotificationsEnabledForPackage(pkg, appUidF);
 
-                        if (headsUp != Notification.HEADS_UP_NEVER) {
-                            headsUp = Notification.HEADS_UP_NEVER;
-                            ((ImageButton) v).setAlpha(0.5f);
-                        } else {
-                            headsUp = Notification.HEADS_UP_ALLOWED;
-                            ((ImageButton) v).setAlpha(1f);
-                        }
-                        setHeadsUpButtonContentDescription(
-                                v, headsUp != Notification.HEADS_UP_NEVER);
-                        mNoMan.setHeadsUpNotificationsEnabledForPackage(pkg, appUidF, headsUp);
+                    if (headsUp != Notification.HEADS_UP_NEVER) {
+                        headsUp = Notification.HEADS_UP_NEVER;
+                        ((ImageButton) v).setAlpha(0.5f);
+                    } else {
+                       headsUp = Notification.HEADS_UP_ALLOWED;
+                        ((ImageButton) v).setAlpha(1f);
                     }
-                });
-            }
+                    setHeadsUpButtonContentDescription(
+                            v, headsUp != Notification.HEADS_UP_NEVER);
+                    mNoMan.setHeadsUpNotificationsEnabledForPackage(pkg, appUidF, headsUp);
+                }
+            });
         } else {
             settingsButton.setVisibility(View.GONE);
             appSettingsButton.setVisibility(View.GONE);
