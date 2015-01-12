@@ -2135,10 +2135,7 @@ public abstract class BaseStatusBar extends SystemUI implements
             boolean isHeadsUpPackage = mNoMan.getHeadsUpNotificationsEnabledForPackage(
                     sbn.getPackageName(), sbn.getUid()) != Notification.HEADS_UP_NEVER;
 
-            boolean isExpanded = false;
-            if (mStackScroller != null) {
-                isExpanded = mStackScroller.getIsExpanded();
-            }
+            boolean isExpanded = mStackScroller.getIsExpanded();
             // Possibly a heads up package set from the user.
             interrupt = isHeadsUpPackage
                     && !sbn.isOngoing()
