@@ -116,7 +116,7 @@ public class QSPanel extends ViewGroup {
             @Override
             public void onClick(View v) {
                 closeDetail();
-                vibrateTile(20);
+                vibrateTile(10);
             }
         });
     }
@@ -287,7 +287,7 @@ public class QSPanel extends ViewGroup {
             public void onToggleStateChanged(boolean state) {
                 if (mDetailRecord == r) {
                     fireToggleStateChanged(state);
-                    vibrateTile(20);
+                    vibrateTile(10);
                 }
             }
             @Override
@@ -308,21 +308,21 @@ public class QSPanel extends ViewGroup {
             @Override
             public void onClick(View v) {
                 r.tile.click();
-                vibrateTile(20);
+                vibrateTile(10);
             }
         };
         final View.OnClickListener clickSecondary = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 r.tile.secondaryClick();
-                vibrateTile(20);
+                vibrateTile(10);
             }
         };
         final View.OnLongClickListener clickLong = new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
                 r.tile.longClick();
-                vibrateTile(20);
+                vibrateTile(10);
                 return true;
             }
         };
@@ -378,7 +378,7 @@ public class QSPanel extends ViewGroup {
                 @Override
                 public void onClick(View v) {
                     mHost.startSettingsActivity(settingsIntent);
-                    vibrateTile(20);
+                    vibrateTile(10);
                 }
             });
 
