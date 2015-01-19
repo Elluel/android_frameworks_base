@@ -479,11 +479,11 @@ public class HeadsUpNotificationView extends LinearLayout implements SwipeHelper
                             // can see it now in the notification panel.
                             if (DEBUG_EDGE_SWIPE) Log.d(TAG, "found an open");
                             mBar.animateExpandNotificationsPanel();
-                            mBar.scheduleHeadsUpClose();
+                            mBar.onHeadsUpDismissed(true);
 			}
                         if (dY < 0) {
                             if (DEBUG_EDGE_SWIPE) Log.d(TAG, "found a close");
-                            mBar.scheduleHeadsUpClose();
+                            mBar.onHeadsUpDismissed(true);
                         }
                         mConsuming = true;
                     }
