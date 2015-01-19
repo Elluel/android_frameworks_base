@@ -70,8 +70,10 @@ public class LocationTile extends QSTile<QSTile.BooleanState> {
     protected void handleUpdateState(BooleanState state, Object arg) {
         final boolean locationEnabled =  mController.isLocationEnabled();
 
-        // Hide location tile
-        state.visible = false;
+        // Work around for bug 15916487: don't show location tile on top of lock screen. After the
+        // bug is fixed, this should be reverted to only hiding it on secure lock screens:
+        // state.visible = !(mKeyguard.isSecure() && mKeyguard.isShowing());
+        state.visible = !mKeyguard.isShowing();
         state.value = locationEnabled;
         if (locationEnabled) {
             state.iconId = R.drawable.ic_qs_location_on;
