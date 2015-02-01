@@ -402,7 +402,11 @@ public class HeadsUpNotificationView extends FrameLayout implements SwipeHelper.
                         if (dY > 0) {
                             if (DEBUG_EDGE_SWIPE) Log.d(TAG, "found an open");
                             mBar.animateExpandNotificationsPanel();
-                            mBar.onHeadsUpDismissed(true);
+                            mBar.scheduleHeadsUpClose();
+                        }
+                        if (dY < 0) {
+                            if (DEBUG_EDGE_SWIPE) Log.d(TAG, "found a close");
+                            mBar.scheduleHeadsUpClose();
                         }
                         mConsuming = true;
                     }
