@@ -76,7 +76,7 @@ public class DataTile extends QSTile<QSTile.BooleanState> {
     }
 
     @Override
-    protected void handleSecondaryClick {
+    protected void handleSecondaryClick() {
         Intent intent = new Intent();
         intent.setComponent(new ComponentName(
                 "com.android.settings",
